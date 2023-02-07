@@ -12,3 +12,33 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 docker images ==>
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+1.3
+docker container stop looper
+	looper
+docker run -it -d --name test  devopsdockeruh/simple-web-service:ubuntu
+	5c2a435dd46e4e4bb7777216bab1b30130aa478f54242495e86989a3bb3a5513
+docker exec -it test bash
+	root@5c2a435dd46e:/usr/src/app# tail -f ./text.log
+	2023-02-07 11:28:47 +0000 UTC
+	2023-02-07 11:28:49 +0000 UTC
+	2023-02-07 11:28:51 +0000 UTC
+	2023-02-07 11:28:53 +0000 UTC
+	Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+1.4
+docker run  -d -it --name exec ubuntu
+docker exec -it exec bash
+	root@ee17f291eadf:/# apt-get -y update; apt-get -y install curl
+	root@ee17f291eadf:/# sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+	Input website:
+	helsinki.fi
+	Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
+root@ee17f291eadf:/#
