@@ -1,0 +1,14 @@
+1.1 Getting started
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+788bc614c853   nginx     "/docker-entrypoint.…"   44 seconds ago   Exited (0) 16 seconds ago             compassionate_meitner
+d12cb1cb450a   nginx     "/docker-entrypoint.…"   48 seconds ago   Exited (0) 10 seconds ago             quizzical_gagarin
+49ac9344554f   nginx     "/docker-entrypoint.…"   53 seconds ago   Up 51 seconds               80/tcp    admiring_euler
+
+1.2: Cleanup
+
+docker ps -a ==>
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker images ==>
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
